@@ -1,22 +1,28 @@
 {
   "name": "@mathieuc/tradingview",
   "version": "3.5.1",
-  "description": "Tradingview instant stocks API, indicator alerts, trading bot, and more !",
+  "description": "Tradingview instant stocks API, indicator alerts, trading bot, and more!",
   "main": "main.js",
+  "type": "module",
   "scripts": {
+    "start": "node --env-file=.env main.js",
+    "dev": "nodemon --env-file=.env main.js",
     "test": "vitest",
-    "example": "node --env-file=.env",
-    "example:dev": "nodemon --env-file=.env"
+    "test:watch": "vitest watch",
+    "lint": "eslint .",
+    "example": "node --env-file=.env examples/example.js",
+    "example:dev": "nodemon --env-file=.env examples/example.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Mathieu2301/TradingView-API.git"
   },
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
   },
   "keywords": [
-    "tradingwiew",
+    "tradingview",
     "market",
     "stocks",
     "crypto",
@@ -39,6 +45,12 @@
     "eslint": "^7.25.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
+    "nodemon": "^3.0.1",
     "vitest": "^0.31.4"
-  }
+  },
+  "files": [
+    "main.js",
+    "lib/",
+    "examples/"
+  ]
 }
